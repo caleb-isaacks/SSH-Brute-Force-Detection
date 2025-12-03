@@ -1,0 +1,14 @@
+```spl
+index=auth_logs ("Failed password" OR "Accepted password")
+| eval event_type=case(
+    searchmatch("Failed password"), "failed",
+    searchmatch("Accepted password"), "success"
+)
+| bin _time span=5m
+| stats 
+    count(eval(event_type="failed")) AS failed_attempts
+    count(eval(event_type="success")) AS success_count
+    values(username) AS targeted_users
+BY src_ip, _time
+| where failed_attempts >= 5 OR success_count > 0
+| sort _time

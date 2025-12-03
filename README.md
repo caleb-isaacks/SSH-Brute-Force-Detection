@@ -45,4 +45,7 @@ BY src_ip, _time
 | where failed_attempts >= 5 OR success_count > 0
 | sort _time
 ```
+<img width="798" height="839" alt="Pasted Graphic 1" src="https://github.com/user-attachments/assets/edef7ba7-31ac-4676-9b95-d77d803d1c43" />
+<img width="1705" height="613" alt="Pasted Graphic 2" src="https://github.com/user-attachments/assets/614d6205-090e-41db-83b0-cadc00a15323" />
+<img width="1708" height="552" alt="Pasted Graphic 3" src="https://github.com/user-attachments/assets/f73c9afc-962d-4834-8956-ceea82363ec6" />
 

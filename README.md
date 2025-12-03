@@ -44,3 +44,9 @@ index=auth_logs ("Failed password" OR "Accepted password")
 BY src_ip, _time
 | where failed_attempts >= 5 OR success_count > 0
 | sort _time
+```
+<img width="798" height="839" alt="Pasted Graphic 1" src="https://github.com/user-attachments/assets/f2db90b2-9c0f-4427-b6ef-1ccb0dbe2d6e" />
+
+<img width="1705" height="613" alt="Pasted Graphic 2" src="https://github.com/user-attachments/assets/8685277b-ea9b-43bd-aa17-fd3b7cddb3e6" />
+
+<img width="1708" height="552" alt="Pasted Graphic 3" src="https://github.com/user-attachments/assets/29854ba3-9646-4e8c-be67-5178524f28e4" />
